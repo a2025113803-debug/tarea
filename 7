@@ -1,0 +1,16 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+    string t[] = {
+        "cero","uno","dos","tres","cuatro","cinco","seis","siete","ocho","nueve",
+        "diez","once","doce","trece","catorce","quince","dieciseis","diecisiete",
+        "dieciocho","diecinueve","veinte"
+    };
+
+    int n;
+    cin >> n;
+
+    if (n < 0 || n > 20) cout << "Fuera de rango";
+    else cout << t[n];
+}

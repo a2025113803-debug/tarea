@@ -1,0 +1,27 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n, m;
+    cin >> n;
+    vector<double> A(n);
+    for (int i = 0; i < n; i++) cin >> A[i];
+
+    cin >> m;
+    vector<double> B(m);
+    for (int i = 0; i < m; i++) cin >> B[i];
+
+    vector<double> C;
+    int i = 0, j = 0;
+
+    while (i < n && j < m) {
+        if (A[i] < B[j]) C.push_back(A[i++]);
+        else C.push_back(B[j++]);
+    }
+
+    while (i < n) C.push_back(A[i++]);
+    while (j < m) C.push_back(B[j++]);
+
+    for (double x : C) cout << x << " ";
+}

@@ -1,0 +1,23 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int main() {
+    int n;
+    cin >> n;
+
+    vector<double> v(n);
+    for (int i = 0; i < n; i++) cin >> v[i];
+
+    int pos = 0, neg = 0, cer = 0;
+
+    for (double x : v) {
+        if (x > 0) pos++;
+        else if (x < 0) neg++;
+        else cer++;
+    }
+
+    cout << "Positivos: " << pos << "\n";
+    cout << "Negativos: " << neg << "\n";
+    cout << "Ceros: " << cer << "\n";
+}
